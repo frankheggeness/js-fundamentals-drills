@@ -5,8 +5,14 @@
  * @param {Array} // [1,2,3]
  * @return {Array} // [2,4,6]
  */
-var doubleArray;
-
+function doubleArray(arr){
+  newArray = []
+  for(i=0;i<arr.length;i++){
+    newArray.push(arr[i]*2)
+  }
+  return newArray;
+}
+console.log(doubleArray([1,2,3]))
 /* #sumArrays
  *
  * Takes in two arrays of numbers and returns the sum of both arrays.
@@ -364,8 +370,8 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
-  sumArrays: null,
+  doubleArray: doubleArray,
+  sumArrays: sumArrays,
   stringCount: null,
   arrayLength: null,
   countAll: null,
