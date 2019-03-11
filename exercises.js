@@ -176,7 +176,12 @@ function splitString(str){
  * @param {Array}
  * @return {Number}
  */
-var lengthOfLast;
+function lengthOfLast(arr){
+  for (i=0;i<arr.length;i++){
+    var strLength = arr[i].length;
+  }
+  return strLength
+}
 
 /* #sumBelowTen
  *
