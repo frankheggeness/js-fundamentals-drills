@@ -153,7 +153,10 @@ function createZeroFilledArray(num){
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+function poppedArray(arr){
+  arr.pop();
+  return arr;
+}
 
 /* #splitString
  *
@@ -431,11 +434,11 @@ module.exports = {
   convertToArray: convertToArray,
   objectSize: objectSize,
   createZeroFilledArray: createZeroFilledArray,
-  poppedArray: null,
-  splitString: null,
-  lengthOfLast: null,
-  sumBelowTen: null,
-  moreThanTenLetters: null,
+  poppedArray: poppedArray,
+  splitString: splitString,
+  lengthOfLast: lengthOfLast,
+  sumBelowTen: sumBelowTen,
+  moreThanTenLetters: moreThanTenLetters,
   multiplyAll: null,
   sumAllPositive: null,
   stringCountBelowThree: null,
