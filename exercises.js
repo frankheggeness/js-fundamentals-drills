@@ -285,7 +285,10 @@ function countObjects(arr){
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+function getObjectKeys(obj){
+  var keys = Object.keys(obj);
+  return keys;
+}
 
 /* #getObjectValues
  *
@@ -294,7 +297,10 @@ var getObjectKeys;
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+function getObjectValues(obj){
+  var values = Object.values(obj);
+  return values;
+}
 
 /* #makeObject
  *
