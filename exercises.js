@@ -328,7 +328,11 @@ console.log(makeObject('hope', 'works'))
  * @param {String}
  * @return {Object}
  */
-var makeObjectReverse;
+function makeObjectReverse(value, key){
+  var obj = {};
+  obj[key] = value;
+  return obj;
+}
 
 /* #tupleToObject
  *
@@ -337,7 +341,11 @@ var makeObjectReverse;
  * @param {Array}
  * @return {Object}
  */
-var tupleToObject;
+function tupleToObject(arr){
+  var obj = {};
+  obj[arr[0]] = arr[1];
+  return obj;
+}
 
 /* #tupleToObjectReverse
  *
@@ -508,11 +516,11 @@ module.exports = {
   getObjectKeys: getObjectKeys,
   getObjectValues: getObjectValues,
   makeObject: makeObject,
-  makeObjectReverse: null,
-  tupleToObject: null,
-  tupleToObjectReverse: null,
-  strToKeys: null,
-  getValues: null,
+  makeObjectReverse: makeObjectReverse,
+  tupleToObject: tupleToObject,
+  tupleToObjectReverse: tupleToObjectReverse,
+  strToKeys: strToKeys,
+  getValues: getValues,
   getKeys: null,
   objectToArray: null,
   arrayToObject: null,
