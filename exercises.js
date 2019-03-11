@@ -273,7 +273,10 @@ function stringCountBelowThree(arr){
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+function countObjects(arr){
+  var amount = arr.length;
+  return amount;
+}
 
 /* #getObjectKeys
  *
