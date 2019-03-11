@@ -113,7 +113,10 @@ function countAllStrings(arr){
  * @param {Object}
  * @return {Array}
  */
-var convertToArray;
+function convertToArray(obj){
+  var values = Object.values(obj);
+  return values;
+}
 
 /* #objectSize
  *
