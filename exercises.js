@@ -487,7 +487,13 @@ function objectsToTuples(obj1, obj2){
  * @param {Array}
  * @return {Object}
  */
-var mapArrayValues;
+function mapArrayValues(arr){
+  var obj = {};
+  for (i=0;i<arr.length;i++){
+    obj[arr[i]] = true;
+  }
+  return obj;
+}
 
 /* #mapStringCounts
  *
@@ -498,7 +504,17 @@ var mapArrayValues;
  * @param {Array}
  * @return {Object}
  */
-var mapStringCounts;
+function mapStringCounts(arr){
+  var newObj = {};
+  for(i=0;i<arr.length;i++){
+    if(arr[i].length>=5){
+      newObj[arr[i]] = true;
+    }else{
+      newObj[arr[i]] =false;
+    }
+  }
+  return newObj;
+}
 
 /* #arrayToObjectNums
  *
@@ -508,7 +524,13 @@ var mapStringCounts;
  * @param {Array}
  * @return {Object}
  */
-var arrayToObjectNums;
+function arrayToObjectNums(arr){
+  var newObj = {};
+  for (i=0;i<arr.length;i++){
+    newObj[arr[i]] = true
+  }
+  return newObj;
+}
 
 /* #stringToKeys
  *
@@ -517,7 +539,14 @@ var arrayToObjectNums;
  * @param {String}
  * @return {Object}
  */
-var stringToKeys;
+function stringToKeys(str){
+  var split = str.split('');
+  var newObj = {};
+  for (i=0;i<split.length;i++){
+    newObj[split[i]] = true;
+  }
+  return newObj;
+}
 
 /* #charCountMap
  *
@@ -527,7 +556,13 @@ var stringToKeys;
  * @param {Array}
  * @return {Object}
  */
-var charCountMap;
+function charCountMap(arr){
+  newObj = {};
+  for(i=0;i<arr.length;i++){
+    newObj[arr[i]] = arr[i].length;
+  }
+  return newObj;
+}
 
 /* #frequencyMap
  *
@@ -536,7 +571,10 @@ var charCountMap;
  * @param {String}
  * @return {Object}
  */
-var frequencyMap;
+function frequencyMap(str){
+  newObj = {};
+
+}
 
 /* #tupleConvertToObject
  *
@@ -546,7 +584,7 @@ var frequencyMap;
  * @param {String}
  * @return {Object}
  */
-var tupleConvertToObject;
+function tupleConvertToObject()
 
 
 module.exports = {
@@ -586,7 +624,7 @@ module.exports = {
   mapStringCounts: mapStringCounts,
   arrayToObjectNums: arrayToObjectNums,
   stringToKeys: stringToKeys,
-  charCountMap: null,
-  frequencyMap: null,
-  tupleConvertToObject: null
+  charCountMap: charCountMap,
+  frequencyMap: frequencyMap,
+  tupleConvertToObject: tupleConvertToObject
 }
