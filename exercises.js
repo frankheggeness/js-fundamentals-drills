@@ -430,7 +430,13 @@ console.log(objectToArray({
  * @param {Array}
  * @return {Object}
  */
-var arrayToObject;
+function arrayToObject(arr){
+  var newObj = {};
+  for (i=0;i<arr.length;i++){
+    newObj[arr[i]] = false;
+  }
+  return newObj;
+}
 
 /* #arraysToObject
  *
