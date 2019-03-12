@@ -354,7 +354,11 @@ function tupleToObject(arr){
  * @param {Array}
  * @return {Object}
  */
-var tupleToObjectReverse;
+function tupleToObjectReverse(arr){
+  var obj = {};
+  obj[arr[1]] = arr[0]
+  return obj;
+}
 
 /* #strToKeys
  *
@@ -363,7 +367,13 @@ var tupleToObjectReverse;
  * @param {Array}
  * @return {Object}
  */
-var strToKeys;
+function strToKeys(arr){
+  var obj = {};
+  for (i=0; i<arr.length;i++){
+    obj[arr[i]] = 0;
+  }
+  return obj;
+}
 
 /* #getValues
  *
