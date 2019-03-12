@@ -571,8 +571,12 @@ function charCountMap(arr){
  * @param {String}
  * @return {Object}
  */
-function frequencyMap(str){
+function frequencyMap(arr){
   newObj = {};
+  for(i=0;i<arr;i++){
+    newObj[arr[i]] = 1
+  }
+  
 
 }
 
@@ -584,7 +588,13 @@ function frequencyMap(str){
  * @param {String}
  * @return {Object}
  */
-function tupleConvertToObject()
+function tupleConvertToObject(arr){
+  newObj = {};
+  for(i=0;i<arr.length;i++){
+    newObj[arr[i][0]] = arr[i][1];
+  }
+  return newObj;
+}
 
 
 module.exports = {
