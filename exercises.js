@@ -382,7 +382,10 @@ function strToKeys(arr){
  * @param {Object}
  * @return {Array}
  */
-var getValues;
+function getValues(obj){
+  var val = Object.values(obj);
+  return val;
+}
 
 /* #getKeys
  *
@@ -391,7 +394,10 @@ var getValues;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+function getKeys(obj){
+  var keys = Object.keys(obj);
+  return keys;
+}
 
 /* #objectToArray
  *
@@ -401,8 +407,21 @@ var getKeys;
  * @param {Object}
  * @return {Array}
  */
-var objectToArray;
-
+function objectToArray(obj){
+  var tupleArray = [];
+  var keysArray = Object.keys(obj);
+  var valuesArray = Object.values(obj);
+  for(i=0;i<keysArray.length;i++){
+    var newArray = [keysArray[i],valuesArray[i]];
+    tupleArray.push(newArray);
+  }
+  return tupleArray;
+}
+console.log(objectToArray({
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3'
+}))
 /* #arrayToObject
  *
  * takes in an array and returns an object with keys set to the elements in the array and
@@ -531,15 +550,15 @@ module.exports = {
   tupleToObjectReverse: tupleToObjectReverse,
   strToKeys: strToKeys,
   getValues: getValues,
-  getKeys: null,
-  objectToArray: null,
-  arrayToObject: null,
-  arraysToObject: null,
-  objectsToTuples: null,
-  mapArrayValues: null,
-  mapStringCounts: null,
-  arrayToObjectNums: null,
-  stringToKeys: null,
+  getKeys: getKeys,
+  objectToArray: objectToArray,
+  arrayToObject: arrayToObject,
+  arraysToObject: arraysToObject,
+  objectsToTuples: objectsToTuples,
+  mapArrayValues: mapArrayValues,
+  mapStringCounts: mapStringCounts,
+  arrayToObjectNums: arrayToObjectNums,
+  stringToKeys: stringToKeys,
   charCountMap: null,
   frequencyMap: null,
   tupleConvertToObject: null
