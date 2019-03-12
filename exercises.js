@@ -447,7 +447,13 @@ function arrayToObject(arr){
  * @param {Array}
  * @return {Object}
  */
-var arraysToObject;
+function arraysToObject(arr1, arr2){
+  var newObj = {};
+  for (i=0;i<arr1.length; i++){
+    newObj[arr1[i]] = arr2[i]
+  }
+  return newObj;
+}
 
 /* #objectsToTuples
  *
@@ -457,7 +463,22 @@ var arraysToObject;
  * @param {Object}
  * @return {Array}
  */
-var objectsToTuples;
+function objectsToTuples(obj1, obj2){
+  var newTupes = [];
+  var keys1 = Object.keys(obj1);
+  var keys2 = Object.keys(obj2);
+  var values1 = Object.values(obj1);
+  var values2 = Object.values(obj2);
+  for (i=0;i<keys1.length;i++){
+    newArr = [keys1[i], values1[i]];
+    newTupes.push(newArr);
+  }
+  for (i=0;i<keys2.length;i++){
+    newArr2 = [keys2[i], values2[i]];
+    newTupes.push(newArr2);
+  }
+  return newTupes;
+}
 
 /* #mapArrayValues
  *
